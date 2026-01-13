@@ -1,6 +1,12 @@
 // console.log('This is separateJS file');
 
 //option- 1 : directly set on the HTML Element
+//<button onclick="console.log(65)">Another button</button>
+
+//option 2: add onclick function on the html element
+//IMPORTANT : we will use this
+//<button onclick="makeRed()">Make Red</button>
+
 
 
 //option 2: add onclick function
@@ -40,6 +46,7 @@ function makeRed(){
 
 
   //option -- 4 finall option
+  //IMPORTANT: we will use this sometimes
    document.getElementById('make-goldenrod').addEventListener('click',function(){
     document.body.style.backgroundColor = 'goldenrod';
   })
