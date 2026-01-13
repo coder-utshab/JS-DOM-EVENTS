@@ -6,6 +6,21 @@
     <title>Button information</title>
 </head>
 <body>
-    
+    <h1>Explore More Button</h1>
+    <input id="text-field" type="'text">
+    <button id="btn-more">Events</button>
+    <script>
+        document.getElementById('text-field').addEventListener('focus', function(){
+            console.log('Event triggered inside the field')
+        })
+
+        document.getElementById('text-field').addEventListener('blur', function(){
+            console.log('Event triggered inside the field blur')
+        })
+
+        document.getElementById('btn-more').addEventListener('click',function(){
+            console.log('event Triggered');
+        })
+    </script>
 </body>
 </html>
