@@ -1,3 +1,7 @@
+
+
+<!-- 25-8 (advanced) Event delegate and benefit of Event bubble -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +20,27 @@
             <li class="item">Eveniet quae </li>
             <li class="item">Vero, placeat esse.</li>
         </ul>
+        <button id="btn-add-item">Add Item</button>
     </section>
     <script>
-        const items = document.getElementsByClassName('item');
-        for(const item of items){
-            item.addEventListener('click', function(){
-               console.log(event.target); 
-            })
-        }
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click', function(){
+        //        console.log(event.target); 
+        //     })
+        // }
+
+        document.getElementById('list-container').addEventListener('click', function(event){
+            console.log(event.target);
+        })
+
+        document.getElementById('btn-add-item').addEventListener('click', function(){
+      const listContainer = document.getElementById('list-container');
+
+        const li = document.createElement('li');
+        li.innerText = 'Brand New Item added';
+        listContainer.appendChild(li);
+        });
     </script>
 </body>
 </html>
